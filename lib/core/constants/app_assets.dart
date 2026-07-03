@@ -14,4 +14,9 @@ class AppAssets {
   static const String interestRateIcon = 'assets/images/interest_rate.png';
   static const String loanThunder = 'assets/images/loan_thunder.png';
   static const String loanOption = 'assets/images/loan_option.png';
+  static const String billLicInsurance = 'assets/images/PYB01.png';
+  static const String billFastag = 'assets/images/PYB02.png';
+  static const String billDth = 'assets/images/PYB03.png';
+  static const String billMobilePostpaid = 'assets/images/PYB04.png';
+  static const String billBroadband = 'assets/images/PYB05.png';
 }
