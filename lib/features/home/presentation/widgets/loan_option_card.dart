@@ -9,7 +9,7 @@ class LoanOptionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 171,
+      height: 185,
       width: double.infinity,
       padding: const EdgeInsets.only(left: 31, top: 25, bottom: 21),
       decoration: BoxDecoration(
@@ -52,7 +52,7 @@ class _LoanCardContent extends StatelessWidget {
               children: [
                 TextSpan(text: 'Loan Option For You\n'),
                 TextSpan(
-                  text: 'Uto 1 Lakhs',
+                  text: 'Upto 1 Lakhs',
                   style: TextStyle(color: AppColors.primary),
                 ),
                 WidgetSpan(
@@ -76,11 +76,11 @@ class _LoanCardContent extends StatelessWidget {
               color: AppColors.textPrimary,
             ),
           ),
-          SizedBox(height: 22),
+          SizedBox(height: 8),
           _LoanBulletText(text: 'Hassle free process'),
-          SizedBox(height: 9),
+          SizedBox(height: 3),
           _LoanBulletText(text: 'instant transfer'),
-          Spacer(),
+          SizedBox(height: 8),
           _ApplyNowButton(),
         ],
       ),
