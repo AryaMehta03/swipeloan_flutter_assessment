@@ -31,9 +31,9 @@ class AppAssets {
   static const String headsetIcon = 'assets/images/help_headset.png';
   static const String navCreditCard =
       'assets/images/bottom_nav_credit_card.png';
-  static const String navInstantLoan = 'assets/images/bottom_nav_rupee.png';
+  static const String navInstantLoan = 'assets/images/instant_loan_rup.svg';
   static const String navHome = 'assets/images/bottom_nav_home.png';
-  static const String navCip = 'assets/images/bottom_nav_rectangle.png';
+  static const String navCip = 'assets/images/bottom_nav_rupee.png';
   static const String navOtherLoan = 'assets/images/bottom_nav_rupee02.png';
   static const bankIconSvg = 'assets/images/bank.svg';
   static const savePaymentIconSvg = 'assets/images/save_icon_payment_card.svg';

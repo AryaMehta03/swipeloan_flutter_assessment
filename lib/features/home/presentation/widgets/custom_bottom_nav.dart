@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/constants/app_assets.dart';
 import '../../../../core/constants/app_colors.dart';
@@ -44,6 +45,7 @@ class CustomBottomNav extends StatelessWidget {
                       _NavItem(
                         icon: AppAssets.navInstantLoan,
                         label: 'Instant Loan',
+                        isSvg: true,
                       ),
                       SizedBox(width: 66),
                       _NavItem(
@@ -60,7 +62,6 @@ class CustomBottomNav extends StatelessWidget {
                 ),
               ),
             ),
-
             const _HomeButton(),
           ],
         ),
@@ -108,11 +109,13 @@ class _NavItem extends StatelessWidget {
     required this.icon,
     required this.label,
     this.selected = false,
+    this.isSvg = false,
   });
 
   final String icon;
   final String label;
   final bool selected;
+  final bool isSvg;
 
   @override
   Widget build(BuildContext context) {
@@ -121,12 +124,20 @@ class _NavItem extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(
-            icon,
-            width: 16,
-            height: 16,
-            fit: BoxFit.contain,
-          ),
+          if (isSvg)
+            SvgPicture.asset(
+              icon,
+              width: 16,
+              height: 16,
+              fit: BoxFit.contain,
+            )
+          else
+            Image.asset(
+              icon,
+              width: 16,
+              height: 16,
+              fit: BoxFit.contain,
+            ),
           const SizedBox(height: 7),
           Text(
             label,
@@ -135,13 +146,11 @@ class _NavItem extends StatelessWidget {
               fontFamily: 'Inter',
               fontSize: 7,
               fontWeight: FontWeight.w500,
-              color: selected
-                  ? AppColors.primary
-                  : Colors.black,
+              color: selected ? AppColors.primary : Colors.black,
             ),
           ),
         ],
       ),
     );
   }
-} 
+}
