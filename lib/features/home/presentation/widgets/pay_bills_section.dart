@@ -9,7 +9,7 @@ class PayBillsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 134,
+      height: 140,
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(15, 14, 15, 13),
       decoration: BoxDecoration(
