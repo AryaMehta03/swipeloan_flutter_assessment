@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:swipeloan_flutter_assessment/features/home/presentation/widgets/credit_card_payment_card.dart';
+import 'package:swipeloan_flutter_assessment/features/home/presentation/widgets/interest_rate_card.dart';
+import 'package:swipeloan_flutter_assessment/features/home/presentation/widgets/loan_option_card.dart';
 
 import '../../../../core/constants/app_colors.dart';
 import '../widgets/header_section.dart';
@@ -27,6 +29,10 @@ class HomeScreen extends StatelessWidget {
                   const EarnCoinsTile(),
                   const SizedBox(height: 12),
                   const CreditCardPaymentCard(),
+                  const SizedBox(height: 12),
+                  const InterestRateCard(),
+                  const SizedBox(height: 13),
+                  const LoanOptionCard(),
                 ],
               ),
             ),

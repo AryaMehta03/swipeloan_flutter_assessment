@@ -11,4 +11,7 @@ class AppAssets {
   static const String bankIcon = 'assets/images/bank.png';
   static const String savePaymentIcon =
       'assets/images/save_icon_payment_card.png';
+  static const String interestRateIcon = 'assets/images/interest_rate.png';
+  static const String loanThunder = 'assets/images/loan_thunder.png';
+  static const String loanOption = 'assets/images/loan_option.png';
 }
