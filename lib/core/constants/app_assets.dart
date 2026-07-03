@@ -38,4 +38,5 @@ class AppAssets {
   static const bankIconSvg = 'assets/images/bank.svg';
   static const savePaymentIconSvg = 'assets/images/save_icon_payment_card.svg';
   static const scoreProgressBadge = 'assets/images/scroll_carousel_img03.svg';
+  static const String interestRateIconSvg = 'assets/images/interest_rate.svg';
 }
