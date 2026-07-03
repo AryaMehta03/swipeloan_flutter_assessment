@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/constants/app_assets.dart';
 import '../../../../core/constants/app_colors.dart';
@@ -12,13 +13,13 @@ class CreditCardPaymentCard extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Container(
-          height: 147,
+          height: 165,
           width: double.infinity,
           padding: const EdgeInsets.fromLTRB(14, 13, 13, 10),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(7),
-            border: Border.all(color: AppColors.primary),
+            border: Border.all(color: AppColors.primary.withOpacity(0.34)),
           ),
           child: Stack(
             children: const [
@@ -88,12 +89,12 @@ class _BankDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       left: 4,
-      top: 49,
+      top: 42,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(
-            AppAssets.bankIcon,
+          SvgPicture.asset(
+            AppAssets.bankIconSvg,
             width: 17,
             height: 16,
             fit: BoxFit.contain,
@@ -137,7 +138,7 @@ class _AmountText extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Positioned(
       left: 0,
-      top: 86,
+      top: 90,
       child: Text(
         '₹25,295.00',
         style: TextStyle(
@@ -159,7 +160,7 @@ class _PayNowButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       right: 0,
-      top: 72,
+      top: 65,
       child: Container(
         width: 108,
         height: 34,
@@ -167,10 +168,7 @@ class _PayNowButton extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(7),
           gradient: const LinearGradient(
-            colors: [
-              Color(0xFF2DAB7D),
-              Color(0xFFA1D287),
-            ],
+            colors: [Color(0xFF2DAB7D), Color(0xFFA1D287)],
           ),
         ),
         child: const Row(
@@ -187,11 +185,7 @@ class _PayNowButton extends StatelessWidget {
               ),
             ),
             SizedBox(width: 8),
-            Icon(
-              Icons.chevron_right_rounded,
-              size: 18,
-              color: Colors.white,
-            ),
+            Icon(Icons.chevron_right_rounded, size: 18, color: Colors.white),
           ],
         ),
       ),
@@ -206,19 +200,20 @@ class _SavePaymentBadge extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       left: 92,
-      bottom: 0,
+      top: 119,
       child: Container(
         width: 136,
-        height: 15,
-        padding: const EdgeInsets.only(left: 9),
+        height: 16,
+        padding: const EdgeInsets.symmetric(horizontal: 7),
         decoration: BoxDecoration(
           color: const Color(0xFFD7FEE6),
           borderRadius: BorderRadius.circular(12),
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              AppAssets.savePaymentIcon,
+            SvgPicture.asset(
+              AppAssets.savePaymentIconSvg,
               width: 9,
               height: 9,
               fit: BoxFit.contain,
@@ -230,6 +225,7 @@ class _SavePaymentBadge extends StatelessWidget {
                 fontFamily: 'Inter',
                 fontSize: 7,
                 fontWeight: FontWeight.w500,
+                height: 1,
                 color: Color(0xFF13784E),
               ),
             ),
@@ -258,11 +254,7 @@ class _SeeAllPaymentsButton extends StatelessWidget {
           ),
         ),
         SizedBox(width: 7),
-        Icon(
-          Icons.chevron_right_rounded,
-          size: 17,
-          color: AppColors.primary,
-        ),
+        Icon(Icons.chevron_right_rounded, size: 17, color: AppColors.primary),
       ],
     );
   }

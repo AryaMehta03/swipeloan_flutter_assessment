@@ -35,5 +35,7 @@ class AppAssets {
   static const String navHome = 'assets/images/bottom_nav_home.png';
   static const String navCip = 'assets/images/bottom_nav_rectangle.png';
   static const String navOtherLoan = 'assets/images/bottom_nav_rupee02.png';
+  static const bankIconSvg = 'assets/images/bank.svg';
+  static const savePaymentIconSvg = 'assets/images/save_icon_payment_card.svg';
   static const scoreProgressBadge = 'assets/images/scroll_carousel_img03.svg';
 }
