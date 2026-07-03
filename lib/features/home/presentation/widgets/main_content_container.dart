@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/constants/app_colors.dart';
 
+
 class MainContentContainer extends StatelessWidget {
   const MainContentContainer({
     super.key,
