@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/constants/app_colors.dart';
 import '../widgets/header_section.dart';
+import '../widgets/main_content_container.dart';
+import '../widgets/score_carousel.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -13,11 +15,17 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
             HeaderSection(),
+            MainContentContainer(
+              child: Column(
+                children: [
+                  ScoreCarousel(),
 
-            // Main white rounded content starts here next.
+                  // Next sections will come here.
+                ],
+              ),
+            ),
           ],
         ),
       ),
