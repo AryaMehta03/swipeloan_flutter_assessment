@@ -14,9 +14,7 @@ class EarnCoinsTile extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(7),
-        border: Border.all(
-          color: AppColors.primary.withOpacity(0.34),
-        ),
+        border: Border.all(color: AppColors.primary.withOpacity(0.34)),
       ),
       child: Row(
         children: [
@@ -32,14 +30,17 @@ class EarnCoinsTile extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Earn 100 Coins',
-                  style: TextStyle(
-                    fontFamily: 'Inter',
-                    fontSize: 11,
-                    fontWeight: FontWeight.w600,
-                    height: 25.7 / 11,
-                    color: AppColors.textPrimary,
+                Padding(
+                  padding: const EdgeInsets.only(top: 2),
+                  child: Text(
+                    'Earn 100 Coins',
+                    style: TextStyle(
+                      fontFamily: 'Inter',
+                      fontSize: 11,
+                      fontWeight: FontWeight.w600,
+                      height: 1,
+                      color: AppColors.textPrimary,
+                    ),
                   ),
                 ),
                 Text(
