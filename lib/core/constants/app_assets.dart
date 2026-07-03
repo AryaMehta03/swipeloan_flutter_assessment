@@ -1,10 +1,12 @@
+import 'package:flutter_svg/flutter_svg.dart';
+
 class AppAssets {
   const AppAssets._();
 
   static const String heroBackground = 'assets/images/header_background.png';
   static const String avatar = 'assets/images/header_avatar.png';
   static const String scoreCarouselBadge =
-      'assets/images/scroll_carousel_img01.png';
+      'assets/images/scroll_carousel_img03.svg';
   static const String earnCoinsGiftBox =
       'assets/images/earn_coins_tile_giftbox.png';
   static const String creditCardIcon = 'assets/images/credit_card.png';
@@ -22,14 +24,16 @@ class AppAssets {
   static const String debitWallet = 'assets/images/debit_wallet.png';
   static const String creditWallet = 'assets/images/credit_wallet.png';
   static const String exploreScorePredictor = 'assets/images/explore_meter.png';
-  static const String exploreCalculator ='assets/images/explore_calculator.png';
+  static const String exploreCalculator =
+      'assets/images/explore_calculator.png';
   static const String exploreMoneyBag = 'assets/images/explorer_moneybag.png';
   static const String helpBannerWoman = 'assets/images/help_banner_person.png';
   static const String headsetIcon = 'assets/images/help_headset.png';
-  static const String navCreditCard = 'assets/images/bottom_nav_credit_card.png';
+  static const String navCreditCard =
+      'assets/images/bottom_nav_credit_card.png';
   static const String navInstantLoan = 'assets/images/bottom_nav_rupee.png';
   static const String navHome = 'assets/images/bottom_nav_home.png';
   static const String navCip = 'assets/images/bottom_nav_rectangle.png';
   static const String navOtherLoan = 'assets/images/bottom_nav_rupee02.png';
-  
+  static const scoreProgressBadge = 'assets/images/scroll_carousel_img03.svg';
 }

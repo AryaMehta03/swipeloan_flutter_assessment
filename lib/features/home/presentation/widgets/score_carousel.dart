@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../core/constants/app_assets.dart';
 import '../../../../core/constants/app_colors.dart';
 
@@ -31,7 +31,7 @@ class _ScoreCarouselState extends State<ScoreCarousel> {
         AnimatedContainer(
           duration: const Duration(milliseconds: 250),
           curve: Curves.easeOut,
-          height: _selectedIndex == 0 ? 255 : 285,
+          height: _selectedIndex == 0 ? 285 : 285,
           child: PageView(
             controller: _pageController,
             onPageChanged: _onPageChanged,
@@ -52,7 +52,7 @@ class _ScoreImprovementPlan extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: const [
-        _ActiveBadge(),
+        _ScoreProgressBadge(),
         SizedBox(height: 32),
         Row(
           children: [
@@ -61,7 +61,7 @@ class _ScoreImprovementPlan extends StatelessWidget {
             Expanded(child: _ScorePlanDetails()),
           ],
         ),
-        Spacer(),
+        const SizedBox(height: 25,),
         Text(
           'Your Credit Score Is -1\nYou Have Not Taken Any Loan Till Now.',
           textAlign: TextAlign.center,
@@ -74,6 +74,20 @@ class _ScoreImprovementPlan extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class _ScoreProgressBadge extends StatelessWidget {
+  const _ScoreProgressBadge();
+
+  @override
+  Widget build(BuildContext context) {
+    return SvgPicture.asset(
+      AppAssets.scoreProgressBadge,
+      width: 114,
+      height: 15,
+      fit: BoxFit.contain,
     );
   }
 }
@@ -251,7 +265,7 @@ class _ScoreProgressPlan extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: const [
-        Center(child: _ActiveBadge()),
+        Center(child: _ScoreProgressBadge()),
         SizedBox(height: 24),
         _ScoreProgressHeader(),
         SizedBox(height: 18),
@@ -613,7 +627,7 @@ class _ScoreImprovedBanner extends StatelessWidget {
       height: 45,
       width: double.infinity,
       margin: const EdgeInsets.symmetric(horizontal: 26),
-      padding: const EdgeInsets.symmetric(horizontal: 42),
+      padding: const EdgeInsets.symmetric(horizontal: 18),
       decoration: BoxDecoration(
         color: AppColors.primary.withOpacity(0.08),
         borderRadius: BorderRadius.circular(8),
