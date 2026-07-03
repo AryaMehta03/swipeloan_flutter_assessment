@@ -7,12 +7,22 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: AppColors.background,
-
-      // SafeArea prevents content from going under status bar/notch.
       body: SafeArea(
-        child: SizedBox.expand(),
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              // Header Section
+
+              // Hero Banner
+
+              // Main Content Section
+            ],
+          ),
+        ),
       ),
     );
   }
