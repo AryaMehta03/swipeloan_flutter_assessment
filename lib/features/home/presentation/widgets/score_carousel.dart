@@ -627,7 +627,7 @@ class _ScoreImprovedBanner extends StatelessWidget {
       height: 45,
       width: double.infinity,
       margin: const EdgeInsets.symmetric(horizontal: 26),
-      padding: const EdgeInsets.symmetric(horizontal: 18),
+      padding: const EdgeInsets.symmetric(horizontal: 12),
       decoration: BoxDecoration(
         color: AppColors.primary.withOpacity(0.08),
         borderRadius: BorderRadius.circular(8),
