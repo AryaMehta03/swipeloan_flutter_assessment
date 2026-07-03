@@ -112,19 +112,19 @@ class _ExploreMoreTile extends StatelessWidget {
               color: Colors.black,
             ),
           ),
-          const Spacer(),
-          const Align(
-            alignment: Alignment.centerRight,
-            child: CircleAvatar(
-              radius: 13,
-              backgroundColor: Color(0xFFE5F6EE),
-              child: Icon(
-                Icons.arrow_forward_rounded,
-                size: 16,
-                color: AppColors.primary,
-              ),
-            ),
-          ),
+          // const Spacer(),
+          // const Align(
+          //   alignment: Alignment.centerRight,
+          //   child: CircleAvatar(
+          //     radius: 13,
+          //     backgroundColor: Color(0xFFE5F6EE),
+          //     child: Icon(
+          //       Icons.arrow_forward_rounded,
+          //       size: 16,
+          //       color: AppColors.primary,
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );
